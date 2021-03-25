@@ -1,0 +1,50 @@
+<meta charset="utf-8">
+<h1>Uber vs Carro</h1>
+
+<h2>Carro</h2>
+<script>
+
+    var distancia = parseFloat(prompt('Informe a distância em KM:').replace(',', '.'))
+    var autonomia = parseFloat(prompt('Informe quantos KM seu carro faz por litro:').replace(',', '.'))
+    var precoGasolina = parseFloat(prompt('Informe o preço da gasolina:').replace(',', '.'))
+    var precoEst = parseFloat(prompt('Informe o preço do estacionamento:').replace(',', '.'))
+
+    // Valor Gasto com Gasolina na Viagem
+    var gastoGasolina = distancia / autonomia * precoGasolina
+
+    // Total Gasto na Viagem
+    var totalViagem = gastoGasolina + precoEst
+
+    document.write(`
+        Preço da Gasolina: R$ ${precoGasolina.toFixed(2).replace('.', ',')} <br>
+        Valor gasto com Gasolina: R$ ${gastoGasolina.toFixed(2).replace('.', ',')} <br>
+        Preço do Estacionamento: R$ ${precoEst.toFixed(2).replace('.', ',')} <br>
+        Total da Viagem com Carro: R$ ${totalViagem.toFixed(2).replace('.', ',')}
+    `)
+
+</script>
+
+
+<h2>Uber</h2>
+
+<script>
+
+    const precoBase = 2.75
+    const velocidadeMedia = 25
+    const precoMinuto = 0.26
+    const precoKm = 1.40
+
+    // Gasto com KM rodado
+    var gastoKmRodado = distancia * precoKm
+
+    // Gasto com tempo de viagem
+    var qtdHoras = distancia / velocidadeMedia
+    var qtdMinutos = qtdHoras * 60
+    var gastoTempo = qtdMinutos * precoMinuto
+
+    // Gasto total com Uber
+    var totalUber = gastoKmRodado + gastoTempo + precoBase 
+
+    document.write(`Total da Viagem com Uber: R$ ${totalUber.toFixed(2).replace('.', ',')}`)
+
+</script>
