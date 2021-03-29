@@ -16,12 +16,26 @@
     <input type="number" id="campoQuantidade">
 </p>
 
-<button>
+<button onclick="calcular()">
     Calcular Total
 </button>
 
+<script src="js/formataMoeda.js"></script>
 <script>
 
-    
+    function calcular()
+    {
+        var produto = campoNomeProduto.value 
+        var preco = campoPrecoUnitario.valueAsNumber 
+        var quantidade = campoQuantidade.valueAsNumber 
+        var totalCompra = preco * quantidade 
+
+        document.write(`
+            Produto: ${produto} <br>
+            Quantidade: ${quantidade} <br>
+            Preço Unitário: ${formataMoeda(preco)} <br>
+            Total da Compra: ${formataMoeda(totalCompra)}
+        `)
+    }
 
 </script>
