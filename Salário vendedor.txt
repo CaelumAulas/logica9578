@@ -8,3 +8,5 @@ CASO CONTRÁRIO
     aplicar 3% sobre 1500
     aplicar 5% sobre a diferença entre o total das vendas e 1500
     somar o valor calculado da comissao de 3%, o da comissão de 5% e o salario fixo 
+
+    
