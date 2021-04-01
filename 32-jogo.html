@@ -17,9 +17,17 @@
         numeroJogada++
         var numeroSorteado = pegaNumeroAleatorio(0, 10)
         var chute = pegaInt('Informe um chute:')
+        var chutesInvalidos = 0
 
         while (chute > 10 || chute < 0 || isNaN(chute))
         {
+            chutesInvalidos++
+            if (chutesInvalidos == 3) 
+            {
+                alert('Game Over!')
+                break
+            }
+
             chute = pegaInt('Chute inválido! Por favor, informe um número entre 0-10:')
         }
 
