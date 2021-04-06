@@ -1,0 +1,29 @@
+<meta charset="utf-8">
+<h1>Pares e Impares</h1>
+
+<script src="js/pegaNumero.js"></script>
+<script>
+
+    var qtdPares = 0
+    var qtdImpares = 0
+
+    for (var contador = 1; contador <= 7; contador++)
+    {
+        var numero = pegaInt(`Informe o ${contador}º número:`)
+
+        if (numero % 2 == 0) {
+            // é par
+            qtdPares++
+        }
+        else {
+            // é ímpar
+            qtdImpares++
+        }
+    }
+
+    document.write(`
+        Pares: ${qtdPares} <br>
+        Ímpares: ${qtdImpares}
+    `)
+
+</script>
